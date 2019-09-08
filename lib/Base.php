@@ -194,6 +194,7 @@ class Base {
     // if we received a ping, send a pong
     if ($opcode === 'ping') {
       $this->send('pong', 'pong', true);
+      return null;
     }
 
     if ($opcode === 'close') {
